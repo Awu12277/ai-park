@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "skills": "技能",
+    "projects": "项目",
+    "contact": "联系",
+    "hireMe": "雇佣我"
+  },
+  "hero": {
+    "pretitle": "欢迎来到我的世界",
+    "title1": "创意",
+    "title2": "科技",
+    "title3": "架构师",
+    "typingText": "全栈工程师 & AI 工程师",
+    "desc": "在创新与智能的交汇处，<span class='highlight'>打造</span>数字化体验",
+    "exploreWorks": "探索作品",
+    "letsTalk": "交流合作",
+    "yearsExp": "年经验",
+    "projects": "项目",
+    "clients": "客户",
+    "uptime": "运行时间",
+    "scroll": "滚动"
+  },
+  "about": {
+    "availableForHire": "可提供外包服务",
+    "bioName": "陈明远",
+    "bioRole": "全栈开发工程师 & AI 工程师",
+    "bioDesc": "拥有5年以上数字化解决方案架构经验，专注于构建高性能应用，突破技术边界。擅长从响应式前端系统到分布式后端架构的全栈开发，始终以前沿人机交互技术为导向。",
+    "traits": {
+      "fastPaced": {
+        "title": "快速迭代",
+        "desc": "快速原型设计与迭代开发周期"
+      },
+      "aiNative": {
+        "title": "AI 原生",
+        "desc": "利用大语言模型和深度学习构建智能系统"
+      },
+      "futureFocused": {
+        "title": "面向未来",
+        "desc": "持续探索前沿技术"
+      },
+      "precision": {
+        "title": "精准执行",
+        "desc": "整洁架构与像素级完美实现"
+      }
+    },
+    "experience": "工作经历",
+    "timeline": [
+      {
+        "year": "2024",
+        "role": "高级全栈工程师",
+        "company": "远景科技实验室",
+        "desc": "主导 AI 驱动平台开发"
+      },
+      {
+        "year": "2022",
+        "role": "全栈开发工程师",
+        "company": "数据锻造公司",
+        "desc": "构建可扩展数据处理管道"
+      },
+      {
+        "year": "2020",
+        "role": "前端开发工程师",
+        "company": "创意科技",
+        "desc": "开发沉浸式网页体验"
+      }
+    ]
+  },
+  "skills": {
+    "title": "技术",
+    "subtitle": "栈",
+    "intro": "我用这些技术构建未来",
+    "frontend": "前端",
+    "backend": "后端",
+    "aiData": "AI / 数据",
+    "devops": "运维",
+    "toolsTitle": "工具 & 平台",
+    "tools": {
+      "vscode": "VS Code",
+      "figma": "Figma",
+      "git": "Git",
+      "postman": "Postman",
+      "vercel": "Vercel",
+      "supabase": "Supabase",
+      "prisma": "Prisma",
+      "redis": "Redis"
+    }
+  },
+  "projects": {
+    "title": "精选",
+    "subtitle": "项目",
+    "intro": "代码与创意的交汇之作",
+    "viewProject": "查看项目",
+    "items": [
+      {
+        "title": "NeuralChat",
+        "category": "AI 应用",
+        "desc": "基于大语言模型的实时 AI 对话平台，支持多模态、流式响应和上下文记忆。",
+        "status": "已上线"
+      },
+      {
+        "title": "DataForge",
+        "category": "数据平台",
+        "desc": "可扩展的实时数据处理管道，日处理千万级事件，支持流式分析和机器学习推理。",
+        "status": "生产环境"
+      },
+      {
+        "title": "Synthwave UI",
+        "category": "设计系统",
+        "desc": "未来感组件库，包含60+组件、暗色模式、玻璃拟态和 WebGL 可视化增强。",
+        "status": "开源"
+      },
+      {
+        "title": "CloudPilot",
+        "category": "运维工具",
+        "desc": "智能云资源优化器，提供成本分析、自动伸缩规则和多云部署自动化。",
+        "status": "Beta"
+      },
+      {
+        "title": "VoxelMind",
+        "category": "AI / 3D",
+        "desc": "结合计算机视觉和程序生成的3D空间 AI 助手，用于沉浸式环境构建。",
+        "status": "研发中"
+      },
+      {
+        "title": "ChainVault",
+        "category": "Web3",
+        "desc": "去中心化安全文档验证系统，基于零知识证明和 IPFS 存储。",
+        "status": "已上线"
+      }
+    ]
+  },
+  "contact": {
+    "title": "取得",
+    "subtitle": "联系",
+    "desc": "有项目想法或合作机会吗？我始终乐于探讨创新理念，共同打造卓越作品。",
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "email": "邮箱"
+    },
+    "terminal": {
+      "title": "~/contact",
+      "response": "// 响应：让我们共同构建未来！"
+    },
+    "form": {
+      "header": "发送消息",
+      "name": "姓名",
+      "email": "邮箱",
+      "subject": "主题",
+      "message": "留言",
+      "namePlaceholder": "张三",
+      "emailPlaceholder": "zhang{'@'}example.com",
+      "subjectPlaceholder": "项目合作...",
+      "messagePlaceholder": "请描述您的项目...",
+      "submit": "发送消息",
+      "nameRequired": "请输入姓名",
+      "emailRequired": "请输入有效邮箱",
+      "messageRequired": "请输入留言",
+      "success": "消息发送成功！",
+      "successSub": "我会尽快回复您。"
+    },
+    "footer": {
+      "copy": "© 2024 — 用 ♥ 与前沿科技精心打造",
+      "tech": "Vue 3 · TypeScript · Vite"
+    }
+  }
+}

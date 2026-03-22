@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const isVisible = ref(false)
 
 const skillGroups = [
   {
-    title: 'Frontend',
+    titleKey: 'skills.frontend',
     color: '#00f0ff',
     glow: 'rgba(0, 240, 255, 0.4)',
     skills: [
@@ -16,7 +18,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'Backend',
+    titleKey: 'skills.backend',
     color: '#7b2fff',
     glow: 'rgba(123, 47, 255, 0.4)',
     skills: [
@@ -27,7 +29,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'AI / Data',
+    titleKey: 'skills.aiData',
     color: '#00ff88',
     glow: 'rgba(0, 255, 136, 0.4)',
     skills: [
@@ -38,7 +40,7 @@ const skillGroups = [
     ],
   },
   {
-    title: 'DevOps',
+    titleKey: 'skills.devops',
     color: '#ff6b00',
     glow: 'rgba(255, 107, 0, 0.4)',
     skills: [
@@ -51,14 +53,14 @@ const skillGroups = [
 ]
 
 const tools = [
-  { name: 'VS Code', icon: '⌨' },
-  { name: 'Figma', icon: '✦' },
-  { name: 'Git', icon: '⎇' },
-  { name: 'Postman', icon: '⬡' },
-  { name: 'Vercel', icon: '▲' },
-  { name: 'Supabase', icon: '◈' },
-  { name: 'Prisma', icon: '◆' },
-  { name: 'Redis', icon: '◉' },
+  { key: 'vscode', icon: '⌨' },
+  { key: 'figma', icon: '✦' },
+  { key: 'git', icon: '⎇' },
+  { key: 'postman', icon: '⬡' },
+  { key: 'vercel', icon: '▲' },
+  { key: 'supabase', icon: '◈' },
+  { key: 'prisma', icon: '◆' },
+  { key: 'redis', icon: '◉' },
 ]
 
 onMounted(() => {
@@ -77,11 +79,11 @@ onMounted(() => {
   <section class="section skills-section" id="skills">
     <div class="container">
       <div class="skills-header" :class="{ visible: isVisible }">
-        <h2 class="section-title" data-text="SKILLS">
-          <span class="accent">TECH</span> STACK
+        <h2 class="section-title">
+          <span class="accent">{{ t('skills.title') }}</span> {{ t('skills.subtitle') }}
         </h2>
         <p class="skills-intro">
-          Technologies I work with to build the future
+          {{ t('skills.intro') }}
         </p>
       </div>
 
@@ -89,7 +91,7 @@ onMounted(() => {
         <div
           class="skill-group glass-card"
           v-for="(group, gi) in skillGroups"
-          :key="group.title"
+          :key="group.titleKey"
           :style="{
             transitionDelay: (gi * 0.1) + 's',
             '--group-color': group.color,
@@ -98,7 +100,7 @@ onMounted(() => {
         >
           <div class="group-header">
             <div class="group-dot"></div>
-            <h3 class="group-title">{{ group.title }}</h3>
+            <h3 class="group-title">{{ t(group.titleKey) }}</h3>
           </div>
 
           <div class="skill-bars">
@@ -125,12 +127,12 @@ onMounted(() => {
       <div class="tools-section" :class="{ visible: isVisible }">
         <h3 class="tools-title">
           <span class="tools-bar"></span>
-          TOOLS & PLATFORMS
+          {{ t('skills.toolsTitle') }}
         </h3>
         <div class="tools-grid">
-          <div class="tool-item" v-for="tool in tools" :key="tool.name">
+          <div class="tool-item" v-for="tool in tools" :key="tool.key">
             <span class="tool-icon">{{ tool.icon }}</span>
-            <span class="tool-name">{{ tool.name }}</span>
+            <span class="tool-name">{{ t(`skills.tools.${tool.key}`) }}</span>
           </div>
         </div>
       </div>

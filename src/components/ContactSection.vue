@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const isVisible = ref(false)
 const form = ref({ name: '', email: '', subject: '', message: '' })
 const submitting = ref(false)
@@ -9,10 +11,10 @@ const errors = ref({})
 
 function validate() {
   errors.value = {}
-  if (!form.value.name.trim()) errors.value.name = 'Name is required'
+  if (!form.value.name.trim()) errors.value.name = t('contact.form.nameRequired')
   if (!form.value.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email))
-    errors.value.email = 'Valid email required'
-  if (!form.value.message.trim()) errors.value.message = 'Message is required'
+    errors.value.email = t('contact.form.emailRequired')
+  if (!form.value.message.trim()) errors.value.message = t('contact.form.messageRequired')
   return Object.keys(errors.value).length === 0
 }
 
@@ -28,10 +30,10 @@ function handleSubmit() {
 }
 
 const socials = [
-  { name: 'GitHub', handle: '@alexchen', icon: '⌥' },
-  { name: 'LinkedIn', handle: 'alex-chen-dev', icon: '◈' },
-  { name: 'Twitter', handle: '@alexchen_dev', icon: '✦' },
-  { name: 'Email', handle: 'alex@techfuture.io', icon: '✉' },
+  { key: 'github', handle: '@alexchen', icon: '⌥' },
+  { key: 'linkedin', handle: 'alex-chen-dev', icon: '◈' },
+  { key: 'twitter', handle: '@alexchen_dev', icon: '✦' },
+  { key: 'email', handle: 'alex@techfuture.io', icon: '✉' },
 ]
 
 onMounted(() => {
@@ -54,18 +56,17 @@ onMounted(() => {
         <!-- Left: Info -->
         <div class="contact-info">
           <h2 class="section-title">
-            LET'S <span class="accent">CONNECT</span>
+            {{ t('contact.title') }} <span class="accent">{{ t('contact.subtitle') }}</span>
           </h2>
           <p class="contact-desc">
-            Have a project in mind or want to explore collaboration opportunities?
-            I'm always open to discussing innovative ideas and building something extraordinary together.
+            {{ t('contact.desc') }}
           </p>
 
           <div class="socials">
-            <a class="social-item" v-for="s in socials" :key="s.name" href="#">
+            <a class="social-item" v-for="s in socials" :key="s.key" href="#">
               <span class="social-icon">{{ s.icon }}</span>
               <div>
-                <span class="social-name">{{ s.name }}</span>
+                <span class="social-name">{{ t(`contact.socials.${s.key}`) }}</span>
                 <span class="social-handle">{{ s.handle }}</span>
               </div>
               <svg class="social-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -80,10 +81,10 @@ onMounted(() => {
               <span class="t-dot" style="background:#ff5f56"></span>
               <span class="t-dot" style="background:#ffbd2e"></span>
               <span class="t-dot" style="background:#27c93f"></span>
-              <span class="t-title">~/contact</span>
+              <span class="t-title">{{ t('contact.terminal.title') }}</span>
             </div>
             <pre class="terminal-body"><code><span class="t-cmd">$</span> <span class="t-fn">send_message</span>(<span class="t-str">"hello"</span>)
-<span class="t-out">// Response: Let's build the future!</span></code></pre>
+<span class="t-out">{{ t('contact.terminal.response') }}</span></code></pre>
           </div>
         </div>
 
@@ -92,7 +93,7 @@ onMounted(() => {
           <form class="contact-form glass-card" @submit.prevent="handleSubmit">
             <div class="form-header">
               <span class="form-icon">⬡</span>
-              <h3>SEND A MESSAGE</h3>
+              <h3>{{ t('contact.form.header') }}</h3>
             </div>
 
             <!-- Success State -->
@@ -102,28 +103,28 @@ onMounted(() => {
                   <path d="M20 6L9 17l-5-5"/>
                 </svg>
               </div>
-              <p class="success-text">Message transmitted successfully!</p>
-              <p class="success-sub">I'll get back to you soon.</p>
+              <p class="success-text">{{ t('contact.form.success') }}</p>
+              <p class="success-sub">{{ t('contact.form.successSub') }}</p>
             </div>
 
             <template v-else>
               <div class="form-row">
                 <div class="form-group" :class="{ error: errors.name }">
-                  <label>NAME</label>
+                  <label>{{ t('contact.form.name') }}</label>
                   <input
                     type="text"
                     v-model="form.name"
-                    placeholder="John Doe"
+                    :placeholder="t('contact.form.namePlaceholder')"
                     autocomplete="off"
                   />
                   <span class="err-msg" v-if="errors.name">{{ errors.name }}</span>
                 </div>
                 <div class="form-group" :class="{ error: errors.email }">
-                  <label>EMAIL</label>
+                  <label>{{ t('contact.form.email') }}</label>
                   <input
                     type="email"
                     v-model="form.email"
-                    placeholder="john@example.com"
+                    :placeholder="t('contact.form.emailPlaceholder')"
                     autocomplete="off"
                   />
                   <span class="err-msg" v-if="errors.email">{{ errors.email }}</span>
@@ -131,20 +132,20 @@ onMounted(() => {
               </div>
 
               <div class="form-group">
-                <label>SUBJECT</label>
+                <label>{{ t('contact.form.subject') }}</label>
                 <input
                   type="text"
                   v-model="form.subject"
-                  placeholder="Project collaboration..."
+                  :placeholder="t('contact.form.subjectPlaceholder')"
                   autocomplete="off"
                 />
               </div>
 
               <div class="form-group" :class="{ error: errors.message }">
-                <label>MESSAGE</label>
+                <label>{{ t('contact.form.message') }}</label>
                 <textarea
                   v-model="form.message"
-                  placeholder="Tell me about your project..."
+                  :placeholder="t('contact.form.messagePlaceholder')"
                   rows="5"
                 ></textarea>
                 <span class="err-msg" v-if="errors.message">{{ errors.message }}</span>
@@ -156,7 +157,7 @@ onMounted(() => {
                 :disabled="submitting"
               >
                 <span v-if="!submitting">
-                  TRANSMIT MESSAGE
+                  {{ t('contact.form.submit') }}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
                   </svg>
@@ -184,10 +185,9 @@ onMounted(() => {
             <span class="logo-bracket">]</span>
           </div>
           <p class="footer-copy">
-            &copy; 2024 — Designed & Built with
-            <span class="footer-heart">♥</span> and future tech
+            {{ t('contact.footer.copy') }}
           </p>
-          <p class="footer-tech">Vue 3 · TypeScript · Vite</p>
+          <p class="footer-tech">{{ t('contact.footer.tech') }}</p>
         </div>
       </div>
     </div>

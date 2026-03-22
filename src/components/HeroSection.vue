@@ -1,11 +1,14 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const particles = ref([])
 const mouseX = ref(0)
 const mouseY = ref(0)
 const typedText = ref('')
-const fullText = 'FULL-STACK DEVELOPER & AI ENGINEER'
+const fullText = computed(() => t('hero.typingText'))
 const showCursor = ref(true)
 
 let typeIndex = 0
@@ -29,18 +32,24 @@ function handleMouseMove(e) {
   mouseY.value = (e.clientY / window.innerHeight - 0.5) * 20
 }
 
-onMounted(() => {
-  initParticles()
-  window.addEventListener('mousemove', handleMouseMove)
-
+function startTyping() {
+  typeIndex = 0
+  typedText.value = ''
+  clearInterval(typeInterval)
   typeInterval = setInterval(() => {
-    if (typeIndex <= fullText.length) {
-      typedText.value = fullText.slice(0, typeIndex)
+    if (typeIndex <= fullText.value.length) {
+      typedText.value = fullText.value.slice(0, typeIndex)
       typeIndex++
     } else {
       clearInterval(typeInterval)
     }
   }, 60)
+}
+
+onMounted(() => {
+  initParticles()
+  window.addEventListener('mousemove', handleMouseMove)
+  startTyping()
 
   setInterval(() => { showCursor.value = !showCursor.value }, 500)
 })
@@ -87,15 +96,15 @@ onUnmounted(() => {
       <!-- Pre-title -->
       <div class="pretitle">
         <span class="pretitle-line"></span>
-        <span class="pretitle-text">WELCOME TO MY UNIVERSE</span>
+        <span class="pretitle-text">{{ t('hero.pretitle') }}</span>
         <span class="pretitle-line"></span>
       </div>
 
       <!-- Main Title -->
       <h1 class="hero-title">
-        <span class="title-line">CREATIVE</span>
-        <span class="title-line gradient-text">TECH</span>
-        <span class="title-line">ARCHITECT</span>
+        <span class="title-line">{{ t('hero.title1') }}</span>
+        <span class="title-line gradient-text">{{ t('hero.title2') }}</span>
+        <span class="title-line">{{ t('hero.title3') }}</span>
       </h1>
 
       <!-- Typing Subtitle -->
@@ -105,31 +114,27 @@ onUnmounted(() => {
       </div>
 
       <!-- Tagline -->
-      <p class="hero-desc">
-        Crafting digital experiences at the intersection of
-        <span class="highlight">innovation</span> and
-        <span class="highlight">intelligence</span>
-      </p>
+      <p class="hero-desc" v-html="t('hero.desc')"></p>
 
       <!-- CTA Buttons -->
       <div class="hero-cta">
         <a href="#projects" class="btn-neon btn-neon--filled">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          EXPLORE WORKS
+          {{ t('hero.exploreWorks') }}
         </a>
         <a href="#contact" class="btn-neon btn-neon--outline">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          LET'S TALK
+          {{ t('hero.letsTalk') }}
         </a>
       </div>
 
       <!-- Stats Row -->
       <div class="hero-stats">
         <div class="stat-item" v-for="stat in [
-          { num: '5+', label: 'Years Exp' },
-          { num: '50+', label: 'Projects' },
-          { num: '30+', label: 'Clients' },
-          { num: '99', label: 'Uptime %' },
+          { num: '5+', label: t('hero.yearsExp') },
+          { num: '50+', label: t('hero.projects') },
+          { num: '30+', label: t('hero.clients') },
+          { num: '99', label: t('hero.uptime') },
         ]" :key="stat.label">
           <span class="stat-num">{{ stat.num }}</span>
           <span class="stat-label">{{ stat.label }}</span>
@@ -139,7 +144,7 @@ onUnmounted(() => {
 
     <!-- Scroll Indicator -->
     <div class="scroll-indicator">
-      <span>SCROLL</span>
+      <span>{{ t('hero.scroll') }}</span>
       <div class="scroll-line">
         <div class="scroll-dot"></div>
       </div>

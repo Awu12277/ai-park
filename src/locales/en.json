@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "hireMe": "Hire Me"
+  },
+  "hero": {
+    "pretitle": "Welcome To My Universe",
+    "title1": "Creative",
+    "title2": "Tech",
+    "title3": "Architect",
+    "typingText": "Full-Stack Developer & AI Engineer",
+    "desc": "Crafting digital experiences at the intersection of <span class='highlight'>innovation</span> and <span class='highlight'>intelligence</span>",
+    "exploreWorks": "Explore Works",
+    "letsTalk": "Let's Talk",
+    "yearsExp": "Years Exp",
+    "projects": "Projects",
+    "clients": "Clients",
+    "uptime": "Uptime",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "availableForHire": "Available for hire",
+    "bioName": "Alex Chen",
+    "bioRole": "Full-Stack Developer & AI Engineer",
+    "bioDesc": "With 5+ years of experience architecting digital solutions, I specialize in building performant applications that push the boundaries of what's possible. My expertise spans from reactive frontend systems to distributed backend architectures, always with an eye toward the future of human-computer interaction.",
+    "traits": {
+      "fastPaced": {
+        "title": "Fast Paced",
+        "desc": "Rapid prototyping & iterative development cycles"
+      },
+      "aiNative": {
+        "title": "AI Native",
+        "desc": "Building intelligent systems with LLM & deep learning"
+      },
+      "futureFocused": {
+        "title": "Future Focused",
+        "desc": "Always exploring bleeding-edge technologies"
+      },
+      "precision": {
+        "title": "Precision",
+        "desc": "Clean architecture with pixel-perfect execution"
+      }
+    },
+    "experience": "Experience",
+    "timeline": [
+      {
+        "year": "2024",
+        "role": "Senior Full-Stack Engineer",
+        "company": "TechVision Labs",
+        "desc": "Leading AI-powered platform development"
+      },
+      {
+        "year": "2022",
+        "role": "Full-Stack Developer",
+        "company": "DataForge Inc.",
+        "desc": "Built scalable data processing pipelines"
+      },
+      {
+        "year": "2020",
+        "role": "Frontend Developer",
+        "company": "CreativeStack",
+        "desc": "Developed immersive web experiences"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Tech",
+    "subtitle": "Stack",
+    "intro": "Technologies I work with to build the future",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "aiData": "AI / Data",
+    "devops": "DevOps",
+    "toolsTitle": "Tools & Platforms",
+    "tools": {
+      "vscode": "VS Code",
+      "figma": "Figma",
+      "git": "Git",
+      "postman": "Postman",
+      "vercel": "Vercel",
+      "supabase": "Supabase",
+      "prisma": "Prisma",
+      "redis": "Redis"
+    }
+  },
+  "projects": {
+    "title": "Featured",
+    "subtitle": "Projects",
+    "intro": "Selected work from the intersection of code and creativity",
+    "viewProject": "View Project",
+    "items": [
+      {
+        "title": "NeuralChat",
+        "category": "AI Application",
+        "desc": "Real-time AI conversation platform powered by LLMs with multimodal support, streaming responses, and context-aware memory.",
+        "status": "Live"
+      },
+      {
+        "title": "DataForge",
+        "category": "Data Platform",
+        "desc": "Scalable real-time data processing pipeline handling 10M+ events/day with stream analytics and ML inference.",
+        "status": "Production"
+      },
+      {
+        "title": "Synthwave UI",
+        "category": "Design System",
+        "desc": "Futuristic component library with 60+ components, dark mode, glassmorphism, and WebGL-enhanced visualizations.",
+        "status": "Open Source"
+      },
+      {
+        "title": "CloudPilot",
+        "category": "DevOps Tool",
+        "desc": "Intelligent cloud resource optimizer with cost analytics, auto-scaling rules, and multi-cloud deployment automation.",
+        "status": "Beta"
+      },
+      {
+        "title": "VoxelMind",
+        "category": "AI / 3D",
+        "desc": "3D spatial AI assistant using computer vision and procedural generation for immersive environment creation.",
+        "status": "R&D"
+      },
+      {
+        "title": "ChainVault",
+        "category": "Web3",
+        "desc": "Decentralized secure document verification system with zero-knowledge proofs and IPFS storage.",
+        "status": "Live"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's",
+    "subtitle": "Connect",
+    "desc": "Have a project in mind or want to explore collaboration opportunities? I'm always open to discussing innovative ideas and building something extraordinary together.",
+    "socials": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "email": "Email"
+    },
+    "terminal": {
+      "title": "~/contact",
+      "response": "// Response: Let's build the future!"
+    },
+    "form": {
+      "header": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john{'@'}example.com",
+      "subjectPlaceholder": "Project collaboration...",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Transmit Message",
+      "nameRequired": "Name is required",
+      "emailRequired": "Valid email required",
+      "messageRequired": "Message is required",
+      "success": "Message transmitted successfully!",
+      "successSub": "I'll get back to you soon."
+    },
+    "footer": {
+      "copy": "© 2024 — Designed & Built with ♥ and future tech",
+      "tech": "Vue 3 · TypeScript · Vite"
+    }
+  }
+}

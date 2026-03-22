@@ -1,69 +1,17 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const isVisible = ref(false)
 
 const projects = [
-  {
-    title: 'NeuralChat',
-    category: 'AI Application',
-    desc: 'Real-time AI conversation platform powered by LLMs with multimodal support, streaming responses, and context-aware memory.',
-    tags: ['Vue 3', 'FastAPI', 'LLM', 'WebSocket'],
-    color: '#00f0ff',
-    glow: 'rgba(0, 240, 255, 0.15)',
-    status: 'Live',
-    stars: '2.4k',
-  },
-  {
-    title: 'DataForge',
-    category: 'Data Platform',
-    desc: 'Scalable real-time data processing pipeline handling 10M+ events/day with stream analytics and ML inference.',
-    tags: ['Python', 'Kafka', 'ClickHouse', 'K8s'],
-    color: '#7b2fff',
-    glow: 'rgba(123, 47, 255, 0.15)',
-    status: 'Production',
-    stars: '1.8k',
-  },
-  {
-    title: 'Synthwave UI',
-    category: 'Design System',
-    desc: 'Futuristic component library with 60+ components, dark mode, glassmorphism, and WebGL-enhanced visualizations.',
-    tags: ['React', 'TypeScript', 'Storybook', 'CSS'],
-    color: '#ff00ff',
-    glow: 'rgba(255, 0, 255, 0.15)',
-    status: 'Open Source',
-    stars: '3.1k',
-  },
-  {
-    title: 'CloudPilot',
-    category: 'DevOps Tool',
-    desc: 'Intelligent cloud resource optimizer with cost analytics, auto-scaling rules, and multi-cloud deployment automation.',
-    tags: ['Go', 'Terraform', 'AWS', 'GCP'],
-    color: '#00ff88',
-    glow: 'rgba(0, 255, 136, 0.15)',
-    status: 'Beta',
-    stars: '956',
-  },
-  {
-    title: 'VoxelMind',
-    category: 'AI / 3D',
-    desc: '3D spatial AI assistant using computer vision and procedural generation for immersive environment creation.',
-    tags: ['Three.js', 'PyTorch', 'WebGPU', 'Node'],
-    color: '#ff6b00',
-    glow: 'rgba(255, 107, 0, 0.15)',
-    status: 'R&D',
-    stars: '1.2k',
-  },
-  {
-    title: 'ChainVault',
-    category: 'Web3',
-    desc: 'Decentralized secure document verification system with zero-knowledge proofs and IPFS storage.',
-    tags: ['Solidity', 'React', 'IPFS', 'zkSNARKs'],
-    color: '#0066ff',
-    glow: 'rgba(0, 102, 255, 0.15)',
-    status: 'Live',
-    stars: '2.0k',
-  },
+  { title: 'NeuralChat', category: 'projects.items[0].category', desc: 'projects.items[0].desc', tags: ['Vue 3', 'FastAPI', 'LLM', 'WebSocket'], color: '#00f0ff', glow: 'rgba(0, 240, 255, 0.15)', statusKey: 'projects.items[0].status', stars: '2.4k' },
+  { title: 'DataForge', category: 'projects.items[1].category', desc: 'projects.items[1].desc', tags: ['Python', 'Kafka', 'ClickHouse', 'K8s'], color: '#7b2fff', glow: 'rgba(123, 47, 255, 0.15)', statusKey: 'projects.items[1].status', stars: '1.8k' },
+  { title: 'Synthwave UI', category: 'projects.items[2].category', desc: 'projects.items[2].desc', tags: ['React', 'TypeScript', 'Storybook', 'CSS'], color: '#ff00ff', glow: 'rgba(255, 0, 255, 0.15)', statusKey: 'projects.items[2].status', stars: '3.1k' },
+  { title: 'CloudPilot', category: 'projects.items[3].category', desc: 'projects.items[3].desc', tags: ['Go', 'Terraform', 'AWS', 'GCP'], color: '#00ff88', glow: 'rgba(0, 255, 136, 0.15)', statusKey: 'projects.items[3].status', stars: '956' },
+  { title: 'VoxelMind', category: 'projects.items[4].category', desc: 'projects.items[4].desc', tags: ['Three.js', 'PyTorch', 'WebGPU', 'Node'], color: '#ff6b00', glow: 'rgba(255, 107, 0, 0.15)', statusKey: 'projects.items[4].status', stars: '1.2k' },
+  { title: 'ChainVault', category: 'projects.items[5].category', desc: 'projects.items[5].desc', tags: ['Solidity', 'React', 'IPFS', 'zkSNARKs'], color: '#0066ff', glow: 'rgba(0, 102, 255, 0.15)', statusKey: 'projects.items[5].status', stars: '2.0k' },
 ]
 
 onMounted(() => {
@@ -83,10 +31,10 @@ onMounted(() => {
     <div class="container">
       <div class="projects-header" :class="{ visible: isVisible }">
         <h2 class="section-title">
-          <span class="accent">FEATURED</span> PROJECTS
+          <span class="accent">{{ t('projects.title') }}</span> {{ t('projects.subtitle') }}
         </h2>
         <p class="projects-intro">
-          Selected work from the intersection of code and creativity
+          {{ t('projects.intro') }}
         </p>
       </div>
 
@@ -107,14 +55,14 @@ onMounted(() => {
           <!-- Status Badge -->
           <div class="status-badge" :style="{ color: project.color, borderColor: project.color + '40' }">
             <span class="status-dot" :style="{ background: project.color, boxShadow: '0 0 6px ' + project.color }"></span>
-            {{ project.status }}
+            {{ t(project.statusKey) }}
           </div>
 
           <!-- Content -->
           <div class="card-content">
-            <span class="card-category">{{ project.category }}</span>
+            <span class="card-category">{{ t(project.category) }}</span>
             <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-desc">{{ project.desc }}</p>
+            <p class="card-desc">{{ t(project.desc) }}</p>
           </div>
 
           <!-- Tags -->
@@ -131,7 +79,7 @@ onMounted(() => {
               <span>{{ project.stars }}</span>
             </div>
             <a href="#" class="card-link">
-              VIEW PROJECT
+              {{ t('projects.viewProject') }}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
               </svg>

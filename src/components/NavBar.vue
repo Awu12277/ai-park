@@ -1,15 +1,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+const emit = defineEmits(['toggle-lang'])
+
+const props = defineProps({
+  isZh: Boolean,
+})
 
 const scrolled = ref(false)
 const mobileOpen = ref(false)
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'nav.home', href: '#home' },
+  { name: 'nav.about', href: '#about' },
+  { name: 'nav.skills', href: '#skills' },
+  { name: 'nav.projects', href: '#projects' },
+  { name: 'nav.contact', href: '#contact' },
 ]
 
 function handleScroll() {
@@ -44,10 +52,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             class="nav-link"
             @click.prevent="scrollTo(link.href)"
           >
-            {{ link.name }}
+            {{ t(link.name) }}
           </a>
         </li>
       </ul>
+
+      <!-- Language Toggle -->
+      <button class="lang-toggle" @click="emit('toggle-lang')">
+        {{ props.isZh ? 'EN' : '中' }}
+      </button>
 
       <!-- CTA -->
       <a
@@ -55,7 +68,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         class="btn-neon btn-neon--outline nav-cta"
         @click.prevent="scrollTo('#contact')"
       >
-        HIRE ME
+        {{ t('nav.hireMe') }}
       </a>
 
       <!-- Mobile Toggle -->
@@ -75,7 +88,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         class="mobile-link"
         @click.prevent="scrollTo(link.href)"
       >
-        {{ link.name }}
+        {{ t(link.name) }}
       </a>
     </div>
   </nav>
@@ -175,6 +188,26 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   width: 60%;
 }
 
+.lang-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--neon-cyan);
+  background: rgba(0, 240, 255, 0.06);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-shadow: 0 0 8px var(--glow-cyan);
+}
+
+.lang-toggle:hover {
+  background: rgba(0, 240, 255, 0.12);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
 .nav-cta {
   font-size: 0.65rem;
   padding: 8px 20px;
@@ -248,6 +281,10 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   }
 
   .nav-links, .nav-cta {
+    display: none;
+  }
+
+  .lang-toggle {
     display: none;
   }
 

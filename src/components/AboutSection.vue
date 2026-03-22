@@ -1,19 +1,21 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const isVisible = ref(false)
 
 const traits = [
-  { icon: '⚡', title: 'Fast Paced', desc: 'Rapid prototyping & iterative development cycles' },
-  { icon: '🧠', title: 'AI Native', desc: 'Building intelligent systems with LLM & deep learning' },
-  { icon: '🔮', title: 'Future Focused', desc: 'Always exploring bleeding-edge technologies' },
-  { icon: '🎯', title: 'Precision', desc: 'Clean architecture with pixel-perfect execution' },
+  { icon: '⚡', key: 'fastPaced' },
+  { icon: '🧠', key: 'aiNative' },
+  { icon: '🔮', key: 'futureFocused' },
+  { icon: '🎯', key: 'precision' },
 ]
 
 const timeline = [
-  { year: '2024', role: 'Senior Full-Stack Engineer', company: 'TechVision Labs', desc: 'Leading AI-powered platform development' },
-  { year: '2022', role: 'Full-Stack Developer', company: 'DataForge Inc.', desc: 'Built scalable data processing pipelines' },
-  { year: '2020', role: 'Frontend Developer', company: 'CreativeStack', desc: 'Developed immersive web experiences' },
+  { year: '2024' },
+  { year: '2022' },
+  { year: '2020' },
 ]
 
 onMounted(() => {
@@ -55,20 +57,15 @@ onMounted(() => {
               <!-- Floating badge -->
               <div class="avatar-badge">
                 <span class="badge-dot"></span>
-                <span>Available for hire</span>
+                <span>{{ t('about.availableForHire') }}</span>
               </div>
             </div>
           </div>
 
           <div class="bio-text">
-            <h3 class="bio-name">ALEX CHEN</h3>
-            <p class="bio-role">Full-Stack Developer & AI Engineer</p>
-            <p class="bio-desc">
-              With 5+ years of experience architecting digital solutions, I specialize in
-              building performant applications that push the boundaries of what's possible.
-              My expertise spans from reactive frontend systems to distributed backend architectures,
-              always with an eye toward the future of human-computer interaction.
-            </p>
+            <h3 class="bio-name">{{ t('about.bioName') }}</h3>
+            <p class="bio-role">{{ t('about.bioRole') }}</p>
+            <p class="bio-desc">{{ t('about.bioDesc') }}</p>
           </div>
         </div>
 
@@ -76,10 +73,10 @@ onMounted(() => {
         <div class="about-right">
           <!-- Traits -->
           <div class="traits-grid">
-            <div class="trait-card glass-card" v-for="trait in traits" :key="trait.title">
+            <div class="trait-card glass-card" v-for="trait in traits" :key="trait.key">
               <div class="trait-icon">{{ trait.icon }}</div>
-              <h4 class="trait-title">{{ trait.title }}</h4>
-              <p class="trait-desc">{{ trait.desc }}</p>
+              <h4 class="trait-title">{{ t(`about.traits.${trait.key}.title`) }}</h4>
+              <p class="trait-desc">{{ t(`about.traits.${trait.key}.desc`) }}</p>
             </div>
           </div>
 
@@ -87,16 +84,16 @@ onMounted(() => {
           <div class="timeline">
             <h3 class="timeline-title">
               <span class="timeline-bar"></span>
-              EXPERIENCE
+              {{ t('about.experience') }}
             </h3>
             <div class="timeline-items">
               <div class="timeline-item" v-for="item in timeline" :key="item.year">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                   <span class="timeline-year">{{ item.year }}</span>
-                  <h4 class="timeline-role">{{ item.role }}</h4>
-                  <span class="timeline-company">{{ item.company }}</span>
-                  <p class="timeline-desc">{{ item.desc }}</p>
+                  <h4 class="timeline-role">{{ t(`about.timeline[${timeline.indexOf(item)}].role`) }}</h4>
+                  <span class="timeline-company">{{ t(`about.timeline[${timeline.indexOf(item)}].company`) }}</span>
+                  <p class="timeline-desc">{{ t(`about.timeline[${timeline.indexOf(item)}].desc`) }}</p>
                 </div>
               </div>
             </div>
