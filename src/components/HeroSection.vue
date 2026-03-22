@@ -11,6 +11,13 @@ const typedText = ref('')
 const fullText = computed(() => t('hero.typingText'))
 const showCursor = ref(true)
 
+const daysRunning = computed(() => {
+  const start = new Date('2025-03-01')
+  const now = new Date()
+  const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24))
+  return diff > 0 ? diff : 0
+})
+
 let typeIndex = 0
 let typeInterval = null
 let particleInterval = null
@@ -132,9 +139,9 @@ onUnmounted(() => {
       <div class="hero-stats">
         <div class="stat-item" v-for="stat in [
           { num: '5+', label: t('hero.yearsExp') },
-          { num: '50+', label: t('hero.projects') },
-          { num: '30+', label: t('hero.clients') },
-          { num: '99', label: t('hero.uptime') },
+          { num: '20+', label: t('hero.projects') },
+          { num: '26', label: t('hero.clients') },
+          { num: daysRunning, label: t('hero.uptime') },
         ]" :key="stat.label">
           <span class="stat-num">{{ stat.num }}</span>
           <span class="stat-label">{{ stat.label }}</span>
@@ -408,8 +415,8 @@ onUnmounted(() => {
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

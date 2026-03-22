@@ -6,12 +6,11 @@ const { t } = useI18n()
 const isVisible = ref(false)
 
 const projects = [
-  { title: 'NeuralChat', category: 'projects.items[0].category', desc: 'projects.items[0].desc', tags: ['Vue 3', 'FastAPI', 'LLM', 'WebSocket'], color: '#00f0ff', glow: 'rgba(0, 240, 255, 0.15)', statusKey: 'projects.items[0].status', stars: '2.4k' },
-  { title: 'DataForge', category: 'projects.items[1].category', desc: 'projects.items[1].desc', tags: ['Python', 'Kafka', 'ClickHouse', 'K8s'], color: '#7b2fff', glow: 'rgba(123, 47, 255, 0.15)', statusKey: 'projects.items[1].status', stars: '1.8k' },
-  { title: 'Synthwave UI', category: 'projects.items[2].category', desc: 'projects.items[2].desc', tags: ['React', 'TypeScript', 'Storybook', 'CSS'], color: '#ff00ff', glow: 'rgba(255, 0, 255, 0.15)', statusKey: 'projects.items[2].status', stars: '3.1k' },
-  { title: 'CloudPilot', category: 'projects.items[3].category', desc: 'projects.items[3].desc', tags: ['Go', 'Terraform', 'AWS', 'GCP'], color: '#00ff88', glow: 'rgba(0, 255, 136, 0.15)', statusKey: 'projects.items[3].status', stars: '956' },
-  { title: 'VoxelMind', category: 'projects.items[4].category', desc: 'projects.items[4].desc', tags: ['Three.js', 'PyTorch', 'WebGPU', 'Node'], color: '#ff6b00', glow: 'rgba(255, 107, 0, 0.15)', statusKey: 'projects.items[4].status', stars: '1.2k' },
-  { title: 'ChainVault', category: 'projects.items[5].category', desc: 'projects.items[5].desc', tags: ['Solidity', 'React', 'IPFS', 'zkSNARKs'], color: '#0066ff', glow: 'rgba(0, 102, 255, 0.15)', statusKey: 'projects.items[5].status', stars: '2.0k' },
+  { title: 'AI公园', category: 'projects.items[0].category', desc: 'projects.items[0].desc', tags: ['Cursor', 'Claude Code', 'LLM'], color: '#00ff88', glow: 'rgba(0, 255, 136, 0.15)', statusKey: 'projects.items[0].status', stars: '', hasLink: true },
+  { title: '吉客云WMS仓储管理系统', category: 'projects.items[1].category', desc: 'projects.items[1].desc', tags: ['Vue.js', 'miniui', 'Python', 'WebSocket'], color: '#00f0ff', glow: 'rgba(0, 240, 255, 0.15)', statusKey: 'projects.items[1].status', stars: '', hasLink: false },
+  { title: '吉客云移动端项目', category: 'projects.items[2].category', desc: 'projects.items[2].desc', tags: ['uni-app', 'Mand Mobile', 'Vue 3', 'Composition API'], color: '#7b2fff', glow: 'rgba(123, 47, 255, 0.15)', statusKey: 'projects.items[2].status', stars: '', hasLink: false },
+  { title: '3D实现家系统', category: 'projects.items[3].category', desc: 'projects.items[3].desc', tags: ['Vue 3', 'Three.js', 'Konva.js', 'npm'], color: '#ff00ff', glow: 'rgba(255, 0, 255, 0.15)', statusKey: 'projects.items[3].status', stars: '', hasLink: false },
+  { title: '大古水电数字应用', category: 'projects.items[4].category', desc: 'projects.items[4].desc', tags: ['Vue 2', 'Element-UI', 'Sass', 'Webpack'], color: '#00ff88', glow: 'rgba(0, 255, 136, 0.15)', statusKey: 'projects.items[4].status', stars: '', hasLink: false },
 ]
 
 onMounted(() => {
@@ -72,18 +71,24 @@ onMounted(() => {
 
           <!-- Footer -->
           <div class="card-footer">
-            <div class="stars">
+            <div class="stars" v-if="project.stars">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
               <span>{{ project.stars }}</span>
             </div>
-            <a href="#" class="card-link">
+            <a v-if="project.hasLink" href="#" class="card-link">
               {{ t('projects.viewProject') }}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
               </svg>
             </a>
+            <span v-else class="card-link-disabled">
+              {{ t('projects.viewProject') }}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </span>
           </div>
         </div>
       </div>
@@ -274,6 +279,19 @@ onMounted(() => {
 .card-link:hover {
   gap: 8px;
   text-shadow: 0 0 15px var(--p-glow);
+}
+
+.card-link-disabled {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-decoration: none;
+  opacity: 0.4;
 }
 
 @media (max-width: 1024px) {

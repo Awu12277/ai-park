@@ -12,9 +12,9 @@ const skillGroups = [
     glow: 'rgba(0, 240, 255, 0.4)',
     skills: [
       { name: 'Vue.js', level: 95 },
-      { name: 'React', level: 88 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Three.js / WebGL', level: 75 },
+      { name: 'Three.js', level: 80 },
+      { name: 'TypeScript', level: 80 },
+      { name: 'CSS3 / Sass', level: 90 },
     ],
   },
   {
@@ -22,10 +22,10 @@ const skillGroups = [
     color: '#7b2fff',
     glow: 'rgba(123, 47, 255, 0.4)',
     skills: [
-      { name: 'Node.js', level: 92 },
-      { name: 'Python / FastAPI', level: 90 },
-      { name: 'Go', level: 78 },
-      { name: 'GraphQL', level: 85 },
+      { name: 'Python', level: 90 },
+      { name: 'Node.js', level: 80 },
+      // { name: 'MySQL / MongoDB', level: 78 },
+      // { name: 'Express', level: 82 },
     ],
   },
   {
@@ -33,34 +33,32 @@ const skillGroups = [
     color: '#00ff88',
     glow: 'rgba(0, 255, 136, 0.4)',
     skills: [
-      { name: 'LLM Integration', level: 93 },
-      { name: 'PyTorch', level: 85 },
-      { name: 'Computer Vision', level: 80 },
-      { name: 'ML Pipelines', level: 88 },
+      { name: 'Cursor', level: 80 },
+      { name: 'Claude Code', level: 88 },
+      { name: 'Skills', level: 85 },
     ],
   },
-  {
-    titleKey: 'skills.devops',
-    color: '#ff6b00',
-    glow: 'rgba(255, 107, 0, 0.4)',
-    skills: [
-      { name: 'Docker / K8s', level: 88 },
-      { name: 'AWS / GCP', level: 85 },
-      { name: 'CI/CD', level: 90 },
-      { name: 'Linux', level: 92 },
-    ],
-  },
+  // {
+  //   titleKey: 'skills.devops',
+  //   color: '#ff6b00',
+  //   glow: 'rgba(255, 107, 0, 0.4)',
+  //   skills: [
+  //     { name: 'Git', level: 92 },
+  //     { name: 'AWS S3', level: 75 },
+  //     { name: 'Linux', level: 78 },
+  //     { name: 'Redis', level: 72 },
+  //   ],
+  // },
 ]
 
 const tools = [
-  { key: 'vscode', icon: '⌨' },
-  { key: 'figma', icon: '✦' },
+  { key: 'cursor', icon: '◉' },
+  { key: 'claude', icon: '◆' },
+  { key: 'vscode', icon: '◈' },
   { key: 'git', icon: '⎇' },
   { key: 'postman', icon: '⬡' },
+  { key: 'supabase', icon: '▲' },
   { key: 'vercel', icon: '▲' },
-  { key: 'supabase', icon: '◈' },
-  { key: 'prisma', icon: '◆' },
-  { key: 'redis', icon: '◉' },
 ]
 
 onMounted(() => {

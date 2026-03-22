@@ -5,65 +5,66 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
-    "hireMe": "Hire Me"
+    "hireMe": "Contact"
   },
   "hero": {
-    "pretitle": "Welcome To My Universe",
-    "title1": "Creative",
-    "title2": "Tech",
-    "title3": "Architect",
-    "typingText": "Full-Stack Developer & AI Engineer",
+    "pretitle": "Welcome To AI Park",
+    "title1": "AI",
+    "title2": "Creative",
+    "title3": "Workshop",
+    "typingText": "AIGC Project Collection & Tech Lab",
     "desc": "Crafting digital experiences at the intersection of <span class='highlight'>innovation</span> and <span class='highlight'>intelligence</span>",
     "exploreWorks": "Explore Works",
     "letsTalk": "Let's Talk",
     "yearsExp": "Years Exp",
     "projects": "Projects",
-    "clients": "Clients",
-    "uptime": "Uptime",
+    "clients": "Age",
+    "uptime": "Days Running",
     "scroll": "Scroll"
   },
   "about": {
     "availableForHire": "Available for hire",
-    "bioName": "Alex Chen",
-    "bioRole": "Full-Stack Developer & AI Engineer",
-    "bioDesc": "With 5+ years of experience architecting digital solutions, I specialize in building performant applications that push the boundaries of what's possible. My expertise spans from reactive frontend systems to distributed backend architectures, always with an eye toward the future of human-computer interaction.",
+    "bioName": "Ding Xuewu",
+    "bioRole": "Frontend Developer",
+    "bioDesc": "Started learning frontend in early 2021, solid foundation in frontend development, passionate about coding, pursuing excellent code quality and maintainability, enjoy researching and practicing cutting-edge technologies.",
     "traits": {
       "fastPaced": {
-        "title": "Fast Paced",
-        "desc": "Rapid prototyping & iterative development cycles"
+        "title": "Efficient",
+        "desc": "Quick learner with ability to deliver high-quality code under pressure"
       },
       "aiNative": {
         "title": "AI Native",
-        "desc": "Building intelligent systems with LLM & deep learning"
+        "desc": "Experienced in AIGC application development, proficient with AI tools"
       },
       "futureFocused": {
-        "title": "Future Focused",
-        "desc": "Always exploring bleeding-edge technologies"
+        "title": "Tech Enthusiast",
+        "desc": "Continuously exploring cutting-edge frontend technologies"
       },
       "precision": {
-        "title": "Precision",
-        "desc": "Clean architecture with pixel-perfect execution"
+        "title": "Detail-Oriented",
+        "desc": "Clean code architecture with focus on UX and performance"
       }
     },
     "experience": "Experience",
+    "education": "Education",
     "timeline": [
       {
-        "year": "2024",
-        "role": "Senior Full-Stack Engineer",
-        "company": "TechVision Labs",
-        "desc": "Leading AI-powered platform development"
-      },
-      {
-        "year": "2022",
-        "role": "Full-Stack Developer",
-        "company": "DataForge Inc.",
-        "desc": "Built scalable data processing pipelines"
-      },
-      {
-        "year": "2020",
+        "year": "2024.5 - 2025.8",
         "role": "Frontend Developer",
-        "company": "CreativeStack",
-        "desc": "Developed immersive web experiences"
+        "company": "Hangzhou Jekyun Network Technology",
+        "desc": "WMS warehouse management system development, video plugin maintenance"
+      },
+      {
+        "year": "2023.3 - 2024.5",
+        "role": "Frontend Developer",
+        "company": "Chengdu Shixianjia Network Technology (Hangzhou Branch)",
+        "desc": "3D home design platform development with Vue3 tech stack"
+      },
+      {
+        "year": "2022.6 - 2023.3",
+        "role": "Frontend Developer",
+        "company": "Zhejiang Wangxin Hengtian Software",
+        "desc": "Enterprise application development with Vue tech stack"
       }
     ]
   },
@@ -77,73 +78,66 @@
     "devops": "DevOps",
     "toolsTitle": "Tools & Platforms",
     "tools": {
+      "cursor": "Cursor",
+      "claude": "Claude Code",
       "vscode": "VS Code",
-      "figma": "Figma",
       "git": "Git",
       "postman": "Postman",
-      "vercel": "Vercel",
       "supabase": "Supabase",
-      "prisma": "Prisma",
-      "redis": "Redis"
+      "vercel": "Vercel"
     }
   },
   "projects": {
     "title": "Featured",
     "subtitle": "Projects",
-    "intro": "Selected work from the intersection of code and creativity",
-    "viewProject": "View Project",
+    "intro": "Project experience accumulated from practical development",
+    "viewProject": "View Details",
     "items": [
       {
-        "title": "NeuralChat",
-        "category": "AI Application",
-        "desc": "Real-time AI conversation platform powered by LLMs with multimodal support, streaming responses, and context-aware memory.",
-        "status": "Live"
+        "title": "AI Park",
+        "category": "AIGC",
+        "desc": "A virtual project collection entirely generated and built by AI technology. In this project, humans are not just developers, but \"commanders\".",
+        "status": "In Progress"
       },
       {
-        "title": "DataForge",
-        "category": "Data Platform",
-        "desc": "Scalable real-time data processing pipeline handling 10M+ events/day with stream analytics and ML inference.",
+        "title": "Jekyun WMS System",
+        "category": "Enterprise Management",
+        "desc": "WMS warehouse management system for solving traditional warehouse management challenges. Integrated Hikvision web SDK, used Python multithreading to solve video playback lag.",
         "status": "Production"
       },
       {
-        "title": "Synthwave UI",
-        "category": "Design System",
-        "desc": "Futuristic component library with 60+ components, dark mode, glassmorphism, and WebGL-enhanced visualizations.",
-        "status": "Open Source"
+        "title": "Jekyun Mobile App",
+        "category": "Mobile Development",
+        "desc": "WMS mobile project. Refactored code using Vue3 syntax and Composition API to encapsulate common logic, improving code maintainability.",
+        "status": "Production"
       },
       {
-        "title": "CloudPilot",
-        "category": "DevOps Tool",
-        "desc": "Intelligent cloud resource optimizer with cost analytics, auto-scaling rules, and multi-cloud deployment automation.",
-        "status": "Beta"
+        "title": "3D Shixianjia System",
+        "category": "3D Visualization",
+        "desc": "Home furnishing design platform providing professional design tools and rendering for enterprises. Used Three.js to create geometries and real-time 3D scene display.",
+        "status": "Production"
       },
       {
-        "title": "VoxelMind",
-        "category": "AI / 3D",
-        "desc": "3D spatial AI assistant using computer vision and procedural generation for immersive environment creation.",
-        "status": "R&D"
-      },
-      {
-        "title": "ChainVault",
-        "category": "Web3",
-        "desc": "Decentralized secure document verification system with zero-knowledge proofs and IPFS storage.",
-        "status": "Live"
+        "title": "Dagu Hydropower Digital App",
+        "category": "Data Platform",
+        "desc": "PC digital power plant application with technical supervision and fault diagnosis modules. Optimized Webpack build time from 3min to 2min.",
+        "status": "Production"
       }
     ]
   },
   "contact": {
     "title": "Let's",
     "subtitle": "Connect",
-    "desc": "Have a project in mind or want to explore collaboration opportunities? I'm always open to discussing innovative ideas and building something extraordinary together.",
+    "desc": "Interested in frontend development or have a project opportunity? Feel free to reach out. I'm excited to collaborate and build great products together.",
     "socials": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter",
-      "email": "Email"
+      "email": "Email",
+      "location": "Location"
     },
     "terminal": {
       "title": "~/contact",
-      "response": "// Response: Let's build the future!"
+      "response": "// Looking forward to connecting!"
     },
     "form": {
       "header": "Send a Message",
@@ -151,20 +145,20 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "namePlaceholder": "John Doe",
-      "emailPlaceholder": "john{'@'}example.com",
-      "subjectPlaceholder": "Project collaboration...",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your{'@'}email.com",
+      "subjectPlaceholder": "Project collaboration / Internship / Tech discussion...",
       "messagePlaceholder": "Tell me about your project...",
-      "submit": "Transmit Message",
+      "submit": "Send Message",
       "nameRequired": "Name is required",
       "emailRequired": "Valid email required",
       "messageRequired": "Message is required",
-      "success": "Message transmitted successfully!",
+      "success": "Message sent successfully!",
       "successSub": "I'll get back to you soon."
     },
     "footer": {
-      "copy": "© 2024 — Designed & Built with ♥ and future tech",
-      "tech": "Vue 3 · TypeScript · Vite"
+      "copy": "© 2024 Ding Xuewu — Built with ♥ and modern tech",
+      "tech": "Vue 3 · JavaScript · Vite"
     }
   }
 }

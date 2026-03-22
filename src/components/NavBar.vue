@@ -40,7 +40,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <!-- Logo -->
       <a class="nav-logo" href="#home" @click.prevent="scrollTo('#home')">
         <span class="logo-bracket">[</span>
-        <span class="logo-text">A</span>
+        <span class="logo-text">DX</span>
         <span class="logo-bracket">]</span>
       </a>
 

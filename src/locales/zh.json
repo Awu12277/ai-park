@@ -5,145 +5,139 @@
     "skills": "技能",
     "projects": "项目",
     "contact": "联系",
-    "hireMe": "雇佣我"
+    "hireMe": "联系我"
   },
   "hero": {
-    "pretitle": "欢迎来到我的世界",
-    "title1": "创意",
-    "title2": "科技",
-    "title3": "架构师",
-    "typingText": "全栈工程师 & AI 工程师",
+    "pretitle": "欢迎来到 AI 公园",
+    "title1": "AI",
+    "title2": "创意",
+    "title3": "工坊",
+    "typingText": "AIGC 项目集合 & 技术实验场",
     "desc": "在创新与智能的交汇处，<span class='highlight'>打造</span>数字化体验",
     "exploreWorks": "探索作品",
     "letsTalk": "交流合作",
     "yearsExp": "年经验",
     "projects": "项目",
-    "clients": "客户",
-    "uptime": "运行时间",
+    "clients": "年龄",
+    "uptime": "运行天数",
     "scroll": "滚动"
   },
   "about": {
     "availableForHire": "可提供外包服务",
-    "bioName": "陈明远",
-    "bioRole": "全栈开发工程师 & AI 工程师",
-    "bioDesc": "拥有5年以上数字化解决方案架构经验，专注于构建高性能应用，突破技术边界。擅长从响应式前端系统到分布式后端架构的全栈开发，始终以前沿人机交互技术为导向。",
+    "bioName": "丁学武",
+    "bioRole": "前端开发工程师",
+    "bioDesc": "于2021年初开始接触前端，已有5年+开发经验，前端基础扎实，热爱编码，拥抱AI，追求优秀的代码质量和可维护性，喜欢研究前沿技术并实践。",
     "traits": {
       "fastPaced": {
-        "title": "快速迭代",
-        "desc": "快速原型设计与迭代开发周期"
+        "title": "高效执行",
+        "desc": "快速学习与迭代开发，善于在压力下交付高质量代码"
       },
       "aiNative": {
         "title": "AI 原生",
-        "desc": "利用大语言模型和深度学习构建智能系统"
+        "desc": "参与 AIGC 应用开发，熟练使用各类 AI 工具提升开发效率"
       },
       "futureFocused": {
-        "title": "面向未来",
-        "desc": "持续探索前沿技术"
+        "title": "技术热情",
+        "desc": "持续关注前端新技术，Vue/React 生态深度用户"
       },
       "precision": {
-        "title": "精准执行",
-        "desc": "整洁架构与像素级完美实现"
+        "title": "追求卓越",
+        "desc": "代码规范、结构清晰，注重用户体验与性能优化"
       }
     },
     "experience": "工作经历",
+    "education": "教育背景",
     "timeline": [
       {
-        "year": "2024",
-        "role": "高级全栈工程师",
-        "company": "远景科技实验室",
-        "desc": "主导 AI 驱动平台开发"
-      },
-      {
-        "year": "2022",
-        "role": "全栈开发工程师",
-        "company": "数据锻造公司",
-        "desc": "构建可扩展数据处理管道"
-      },
-      {
-        "year": "2020",
+        "year": "2024.5 - 2025.8",
         "role": "前端开发工程师",
-        "company": "创意科技",
-        "desc": "开发沉浸式网页体验"
+        "company": "杭州吉客云网络技术有限公司",
+        "desc": "WMS仓储管理系统开发，视频插件维护"
+      },
+      {
+        "year": "2023.3 - 2024.5",
+        "role": "前端开发工程师",
+        "company": "成都实现家网络科技有限公司杭州分公司",
+        "desc": "3D家装设计平台开发，Vue3技术栈"
+      },
+      {
+        "year": "2022.6 - 2023.3",
+        "role": "前端开发工程师",
+        "company": "浙江网新恒天软件有限公司",
+        "desc": "企业级应用开发，Vue技术栈"
       }
     ]
   },
   "skills": {
     "title": "技术",
     "subtitle": "栈",
-    "intro": "我用这些技术构建未来",
+    "intro": "我使用这些技术栈构建现代 Web 应用",
     "frontend": "前端",
     "backend": "后端",
-    "aiData": "AI / 数据",
+    "aiData": "AI",
     "devops": "运维",
     "toolsTitle": "工具 & 平台",
     "tools": {
+      "cursor": "Cursor",
+      "claude": "Claude Code",
       "vscode": "VS Code",
-      "figma": "Figma",
       "git": "Git",
       "postman": "Postman",
-      "vercel": "Vercel",
       "supabase": "Supabase",
-      "prisma": "Prisma",
-      "redis": "Redis"
+      "vercel": "Vercel"
     }
   },
   "projects": {
     "title": "精选",
     "subtitle": "项目",
-    "intro": "代码与创意的交汇之作",
-    "viewProject": "查看项目",
+    "intro": "从实际开发中积累的项目经验",
+    "viewProject": "查看详情",
     "items": [
       {
-        "title": "NeuralChat",
-        "category": "AI 应用",
-        "desc": "基于大语言模型的实时 AI 对话平台，支持多模态、流式响应和上下文记忆。",
-        "status": "已上线"
+        "title": "AI公园",
+        "category": "AIGC",
+        "desc": "完全由人工智能技术生成和构建的虚拟项目集合。在这个项目中，人类不仅是开发者，更是\"指挥官\"。",
+        "status": "进行中"
       },
       {
-        "title": "DataForge",
-        "category": "数据平台",
-        "desc": "可扩展的实时数据处理管道，日处理千万级事件，支持流式分析和机器学习推理。",
+        "title": "吉客云WMS仓储管理系统",
+        "category": "企业管理系统",
+        "desc": "WMS仓储管理系统用于解决传统仓库管理难题，对接海康官网web开发包，使用Python多线程解决作业视频播放卡顿问题。",
         "status": "生产环境"
       },
       {
-        "title": "Synthwave UI",
-        "category": "设计系统",
-        "desc": "未来感组件库，包含60+组件、暗色模式、玻璃拟态和 WebGL 可视化增强。",
-        "status": "开源"
+        "title": "吉客云移动端项目",
+        "category": "移动端开发",
+        "desc": "WMS移动端项目，使用Vue3语法重构代码，利用Composition API封装公共逻辑，提升代码的可维护性。",
+        "status": "生产环境"
       },
       {
-        "title": "CloudPilot",
-        "category": "运维工具",
-        "desc": "智能云资源优化器，提供成本分析、自动伸缩规则和多云部署自动化。",
-        "status": "Beta"
+        "title": "3D实现家系统",
+        "category": "3D可视化",
+        "desc": "家装家居设计平台，为企业提供专业设计工具和渲染。使用Three.js创建几何体并在3D场景中实时显示。",
+        "status": "生产环境"
       },
       {
-        "title": "VoxelMind",
-        "category": "AI / 3D",
-        "desc": "结合计算机视觉和程序生成的3D空间 AI 助手，用于沉浸式环境构建。",
-        "status": "研发中"
-      },
-      {
-        "title": "ChainVault",
-        "category": "Web3",
-        "desc": "去中心化安全文档验证系统，基于零知识证明和 IPFS 存储。",
-        "status": "已上线"
+        "title": "大古水电数字应用",
+        "category": "数据平台",
+        "desc": "PC端数字电厂应用，包含技术监督、故障诊断等模块。优化Webpack打包速度从3min到2min。",
+        "status": "生产环境"
       }
     ]
   },
   "contact": {
     "title": "取得",
     "subtitle": "联系",
-    "desc": "有项目想法或合作机会吗？我始终乐于探讨创新理念，共同打造卓越作品。",
+    "desc": "对前端开发感兴趣或有项目合作机会？欢迎联系我，期待与您共同打造优秀的产品。",
     "socials": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter",
-      "email": "邮箱"
+      "email": "邮箱",
+      "location": "所在地"
     },
     "terminal": {
       "title": "~/contact",
-      "response": "// 响应：让我们共同构建未来！"
+      "response": "// 期待与您合作！"
     },
     "form": {
       "header": "发送消息",
@@ -151,10 +145,10 @@
       "email": "邮箱",
       "subject": "主题",
       "message": "留言",
-      "namePlaceholder": "张三",
-      "emailPlaceholder": "zhang{'@'}example.com",
-      "subjectPlaceholder": "项目合作...",
-      "messagePlaceholder": "请描述您的项目...",
+      "namePlaceholder": "您的姓名",
+      "emailPlaceholder": "your{'@'}email.com",
+      "subjectPlaceholder": "项目合作 / 实习机会 / 技术交流...",
+      "messagePlaceholder": "请输入您想说的话...",
       "submit": "发送消息",
       "nameRequired": "请输入姓名",
       "emailRequired": "请输入有效邮箱",
@@ -163,8 +157,8 @@
       "successSub": "我会尽快回复您。"
     },
     "footer": {
-      "copy": "© 2024 — 用 ♥ 与前沿科技精心打造",
-      "tech": "Vue 3 · TypeScript · Vite"
+      "copy": "© 2024 丁学武 — 用 ♥ 与前沿技术精心打造",
+      "tech": "Vue 3 · JavaScript · Vite"
     }
   }
 }

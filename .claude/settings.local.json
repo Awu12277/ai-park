@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(where pdftotext:*)",
+      "Bash(where python:*)",
+      "Bash(pdftotext \"d:/ideas/ai-park/简历-前端开发工程师-丁学武.pdf\" -)",
+      "Bash(pip install:*)",
+      "Bash(python -c \":*)"
     ]
   }
 }

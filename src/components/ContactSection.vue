@@ -30,10 +30,10 @@ function handleSubmit() {
 }
 
 const socials = [
-  { key: 'github', handle: '@alexchen', icon: '⌥' },
-  { key: 'linkedin', handle: 'alex-chen-dev', icon: '◈' },
-  { key: 'twitter', handle: '@alexchen_dev', icon: '✦' },
-  { key: 'email', handle: 'alex@techfuture.io', icon: '✉' },
+  { key: 'wechat', handle: 'dxw333dxw', icon: '⌥' },
+  { key: 'github', handle: 'https://github.com/Awu12277', icon: '⌥' },
+  { key: 'email', handle: '2497436726@qq.com', icon: '✉' },
+  { key: 'location', handle: '上海市', icon: '✦' },
 ]
 
 onMounted(() => {
@@ -181,7 +181,7 @@ onMounted(() => {
         <div class="footer-content">
           <div class="footer-logo">
             <span class="logo-bracket">[</span>
-            <span class="logo-text">ALEX.CHEN</span>
+            <span class="logo-text">DING.XUEWU</span>
             <span class="logo-bracket">]</span>
           </div>
           <p class="footer-copy">
