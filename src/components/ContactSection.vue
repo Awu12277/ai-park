@@ -33,7 +33,7 @@ const socials = [
   { key: 'wechat', handle: 'dxw333dxw', icon: '⌥' },
   { key: 'github', handle: 'https://github.com/Awu12277', icon: '⌥' },
   { key: 'email', handle: '2497436726@qq.com', icon: '✉' },
-  { key: 'location', handle: '上海市', icon: '✦' },
+  { key: 'location', handle: '杭州市', icon: '✦' },
 ]
 
 onMounted(() => {
@@ -66,7 +66,7 @@ onMounted(() => {
             <a class="social-item" v-for="s in socials" :key="s.key" href="#">
               <span class="social-icon">{{ s.icon }}</span>
               <div>
-                <span class="social-name">{{ t(`contact.socials.${s.key}`) }}</span>
+                <span class="social-name">{{ t(`${s.key}`) }}</span>
                 <span class="social-handle">{{ s.handle }}</span>
               </div>
               <svg class="social-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

@@ -14,8 +14,7 @@ const traits = [
 
 const timeline = [
   { year: '2024.5 - 2025.8' },
-  { year: '2023.3 - 2024.5' },
-  { year: '2022.6 - 2023.3' },
+  { year: '2022.6 - 2024.5' },
 ]
 
 onMounted(() => {

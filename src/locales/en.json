@@ -14,7 +14,7 @@
     "pretitle": "Welcome To AI Park",
     "title1": "AI",
     "title2": "Creative",
-    "title3": "Workshop",
+    "title3": "Park",
     "typingText": "AIGC Project Collection & Tech Lab",
     "desc": "Crafting digital experiences at the intersection of <span class='highlight'>innovation</span> and <span class='highlight'>intelligence</span>",
     "exploreWorks": "Explore Works",
@@ -58,16 +58,10 @@
         "desc": "WMS warehouse management system development, video plugin maintenance"
       },
       {
-        "year": "2023.3 - 2024.5",
-        "role": "Frontend Developer",
+        "year": "2022.6 - 2024.5",
+        "role": "Web3D Developer",
         "company": "Chengdu Shixianjia Network Technology (Hangzhou Branch)",
         "desc": "3D home design platform development with Vue3 tech stack"
-      },
-      {
-        "year": "2022.6 - 2023.3",
-        "role": "Frontend Developer",
-        "company": "Zhejiang Wangxin Hengtian Software",
-        "desc": "Enterprise application development with Vue tech stack"
       }
     ]
   },
@@ -150,7 +144,7 @@
       "message": "Message",
       "namePlaceholder": "Your name",
       "emailPlaceholder": "your{'@'}email.com",
-      "subjectPlaceholder": "Project collaboration / Internship / Tech discussion...",
+      "subjectPlaceholder": "Project collaboration / Job opportunity / Tech discussion...",
       "messagePlaceholder": "Tell me about your project...",
       "submit": "Send Message",
       "nameRequired": "Name is required",
@@ -160,7 +154,7 @@
       "successSub": "I'll get back to you soon."
     },
     "footer": {
-      "copy": "© 2024 Ding Xuewu — Built with ♥ and modern tech",
+      "copy": "© 2026 Ding Xuewu — Crafted with ♥ and cutting-edge tech",
       "tech": "Vue 3 · JavaScript · Vite"
     }
   }
