@@ -1,4 +1,7 @@
 {
+  "common": {
+    "back": "返回"
+  },
   "nav": {
     "home": "首页",
     "about": "关于",

@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const { t } = useI18n()
 const isVisible = ref(false)
@@ -47,6 +50,8 @@ onMounted(() => {
             '--p-color': project.color,
             '--p-glow': project.glow,
           }"
+          :class="{ 'clickable': project.hasLink }"
+          @click="project.hasLink && router.push('/ai-park')"
         >
           <!-- Card Glow BG -->
           <div class="card-glow"></div>
@@ -77,7 +82,7 @@ onMounted(() => {
               </svg>
               <span>{{ project.stars }}</span>
             </div>
-            <a v-if="project.hasLink" href="#" class="card-link">
+            <a v-if="project.hasLink" href="#" class="card-link" @click.prevent="router.push('/ai-park')">
               {{ t('projects.viewProject') }}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17"/>
@@ -151,6 +156,10 @@ onMounted(() => {
 .projects-grid.visible .project-card {
   opacity: 1;
   transform: translateY(0);
+}
+
+.project-card.clickable {
+  cursor: pointer;
 }
 
 .project-card:hover {

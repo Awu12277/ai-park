@@ -22,11 +22,7 @@ function toggleLang() {
   <div class="app">
     <NavBar @toggle-lang="toggleLang" :is-zh="isZh" />
     <main>
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
+      <router-view />
     </main>
   </div>
 </template>
