@@ -1,10 +1,11 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 const { t } = useI18n()
 const router = useRouter()
+const route = useRoute()
 const emit = defineEmits(['toggle-lang'])
 
 const props = defineProps({
@@ -19,6 +20,8 @@ const navLinks = [
   { name: 'nav.projects', href: '/projects', isRoute: true },
   { name: 'nav.about', href: '/about', isRoute: true },
 ]
+
+const isActive = (href) => route.path === href
 
 function handleScroll() {
   scrolled.value = window.scrollY > 50
@@ -57,6 +60,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
           <a
             :href="link.isRoute ? link.href : '#'"
             class="nav-link"
+            :class="{ active: isActive(link.href) }"
             @click.prevent="navigateTo(link.href, link.isRoute)"
           >
             {{ t(link.name) }}
@@ -185,6 +189,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .nav-link:hover::before {
+  width: 60%;
+}
+
+.nav-link.active {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.nav-link.active::before {
   width: 60%;
 }
 

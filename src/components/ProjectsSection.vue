@@ -13,7 +13,6 @@ const projects = [
   { title: '吉客云WMS仓储管理系统', category: 'projects.items[1].category', desc: 'projects.items[1].desc', tags: ['Vue.js', 'miniui', 'Python', 'WebSocket'], color: '#00f0ff', glow: 'rgba(0, 240, 255, 0.15)', statusKey: 'projects.items[1].status', stars: '', hasLink: false },
   { title: '吉客云移动端项目', category: 'projects.items[2].category', desc: 'projects.items[2].desc', tags: ['uni-app', 'Mand Mobile', 'Vue 3', 'Composition API'], color: '#7b2fff', glow: 'rgba(123, 47, 255, 0.15)', statusKey: 'projects.items[2].status', stars: '', hasLink: false },
   { title: '3D实现家系统', category: 'projects.items[3].category', desc: 'projects.items[3].desc', tags: ['Vue 3', 'Three.js', 'Konva.js', 'npm'], color: '#ff00ff', glow: 'rgba(255, 0, 255, 0.15)', statusKey: 'projects.items[3].status', stars: '', hasLink: false },
-  { title: '大古水电数字应用', category: 'projects.items[4].category', desc: 'projects.items[4].desc', tags: ['Vue 2', 'Element-UI', 'Sass', 'Webpack'], color: '#00ff88', glow: 'rgba(0, 255, 136, 0.15)', statusKey: 'projects.items[4].status', stars: '', hasLink: false },
 ]
 
 onMounted(() => {

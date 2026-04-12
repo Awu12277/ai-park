@@ -9,7 +9,7 @@ const projects = ref([
     id: 1,
     title: 'AI 生成图片',
     desc: '使用 Stable Diffusion 和 Midjourney 生成的数字艺术作品',
-    tags: ['SD', 'Midjourney', 'AI Art'],
+    tags: ['SD', 'MJ', '图片'],
     date: '2024',
     cover: 'image'
   },
@@ -17,7 +17,7 @@ const projects = ref([
     id: 2,
     title: 'AI 视频创作',
     desc: 'AI 驱动的视频生成与剪辑，包含动画和特效',
-    tags: ['Runway', 'Pika', 'Video'],
+    tags: ['Runway', 'Pika', '视频'],
     date: '2024',
     cover: 'video'
   },
@@ -25,7 +25,7 @@ const projects = ref([
     id: 3,
     title: 'AI 音乐制作',
     desc: 'AI 辅助音乐创作、编曲和声音合成',
-    tags: ['Suno', 'Udio', 'Music'],
+    tags: ['Suno', 'Udio', '音乐'],
     date: '2024',
     cover: 'music'
   },
@@ -33,7 +33,7 @@ const projects = ref([
     id: 4,
     title: 'AI 写作助手',
     desc: '基于大语言模型的写作辅助工具',
-    tags: ['GPT', 'Claude', 'Writing'],
+    tags: ['GPT', 'Claude', '写作'],
     date: '2024',
     cover: 'writing'
   },
@@ -41,7 +41,7 @@ const projects = ref([
     id: 5,
     title: 'AI 数据可视化',
     desc: 'AI 驱动的数据分析和可视化仪表盘',
-    tags: ['Python', 'AI', 'Data'],
+    tags: ['Python', 'AI', '数据'],
     date: '2024',
     cover: 'data'
   },
@@ -60,8 +60,8 @@ const projects = ref([
   <div class="projects-page">
     <div class="container">
       <div class="page-header">
-        <h1 class="page-title">{{ t('projects.pageTitle') }}</h1>
-        <p class="page-desc">{{ t('projects.pageDesc') }}</p>
+        <h1 class="page-title">{{ t('aiProjects.pageTitle') }}</h1>
+        <p class="page-desc">{{ t('aiProjects.pageDesc') }}</p>
       </div>
 
       <div class="projects-grid">
