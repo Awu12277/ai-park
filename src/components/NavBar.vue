@@ -1,8 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
+const router = useRouter()
 const emit = defineEmits(['toggle-lang'])
 
 const props = defineProps({
@@ -13,11 +15,9 @@ const scrolled = ref(false)
 const mobileOpen = ref(false)
 
 const navLinks = [
-  { name: 'nav.home', href: '#home' },
-  { name: 'nav.about', href: '#about' },
-  { name: 'nav.skills', href: '#skills' },
-  { name: 'nav.projects', href: '#projects' },
-  { name: 'nav.contact', href: '#contact' },
+  { name: 'nav.home', href: '/', isRoute: true },
+  { name: 'nav.projects', href: '/projects', isRoute: true },
+  { name: 'nav.about', href: '/about', isRoute: true },
 ]
 
 function handleScroll() {
@@ -30,6 +30,15 @@ function scrollTo(href) {
   if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
 
+function navigateTo(href, isRoute) {
+  mobileOpen.value = false
+  if (isRoute) {
+    router.push(href)
+  } else {
+    scrollTo(href)
+  }
+}
+
 onMounted(() => window.addEventListener('scroll', handleScroll))
 onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 </script>
@@ -38,7 +47,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   <nav class="navbar" :class="{ scrolled }">
     <div class="nav-container">
       <!-- Logo -->
-      <a class="nav-logo" href="#home" @click.prevent="scrollTo('#home')">
+      <a class="nav-logo" href="/" @click.prevent="router.push('/')">
         <img src="/logo.svg" alt="Logo" class="logo-img" />
       </a>
 
@@ -46,9 +55,9 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <ul class="nav-links">
         <li v-for="link in navLinks" :key="link.name">
           <a
-            :href="link.href"
+            :href="link.isRoute ? link.href : '#'"
             class="nav-link"
-            @click.prevent="scrollTo(link.href)"
+            @click.prevent="navigateTo(link.href, link.isRoute)"
           >
             {{ t(link.name) }}
           </a>
@@ -62,9 +71,8 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
       <!-- CTA -->
       <a
-        href="#contact"
+        href="mailto:example@email.com"
         class="btn-neon btn-neon--outline nav-cta"
-        @click.prevent="scrollTo('#contact')"
       >
         {{ t('nav.hireMe') }}
       </a>
@@ -84,7 +92,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         :key="link.name"
         :href="link.href"
         class="mobile-link"
-        @click.prevent="scrollTo(link.href)"
+        @click.prevent="navigateTo(link.href, link.isRoute)"
       >
         {{ t(link.name) }}
       </a>

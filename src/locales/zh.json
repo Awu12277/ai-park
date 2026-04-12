@@ -10,6 +10,14 @@
     "contact": "联系",
     "hireMe": "联系我"
   },
+  "home": {
+    "aiCreations": "AI 创作",
+    "aiCreationsSubtitle": "探索我用 AI 技术创造的数字艺术世界"
+  },
+  "projects": {
+    "pageTitle": "AI 项目",
+    "pageDesc": "探索我用 AI 技术创作的各种数字作品"
+  },
   "hero": {
     "pretitle": "欢迎来到 AI 公园",
     "title1": "AI",

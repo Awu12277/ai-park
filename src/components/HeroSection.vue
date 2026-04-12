@@ -1,8 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
+const router = useRouter()
 
 const particles = ref([])
 const mouseX = ref(0)
@@ -11,12 +13,6 @@ const typedText = ref('')
 const fullText = computed(() => t('hero.typingText'))
 const showCursor = ref(true)
 
-const daysRunning = computed(() => {
-  const start = new Date('2025-03-01')
-  const now = new Date()
-  const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24))
-  return diff > 0 ? diff : 0
-})
 
 let typeIndex = 0
 let typeInterval = null
@@ -125,33 +121,20 @@ onUnmounted(() => {
 
       <!-- CTA Buttons -->
       <div class="hero-cta">
-        <a href="#projects" class="btn-neon btn-neon--filled">
+        <a href="/projects" class="btn-neon btn-neon--filled" @click.prevent="router.push('/projects')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           {{ t('hero.exploreWorks') }}
         </a>
-        <a href="#contact" class="btn-neon btn-neon--outline">
+        <a href="/about" class="btn-neon btn-neon--outline" @click.prevent="router.push('/about')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           {{ t('hero.letsTalk') }}
         </a>
       </div>
 
-      <!-- Stats Row -->
-      <div class="hero-stats">
-        <div class="stat-item" v-for="stat in [
-          { num: '5+', label: t('hero.yearsExp') },
-          { num: '20+', label: t('hero.projects') },
-          { num: '26', label: t('hero.clients') },
-          { num: daysRunning, label: t('hero.uptime') },
-        ]" :key="stat.label">
-          <span class="stat-num">{{ stat.num }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
-      </div>
     </div>
 
     <!-- Scroll Indicator -->
     <div class="scroll-indicator">
-      <span>{{ t('hero.scroll') }}</span>
       <div class="scroll-line">
         <div class="scroll-dot"></div>
       </div>
