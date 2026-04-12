@@ -75,7 +75,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
       <!-- CTA -->
       <a
-        href="mailto:example@email.com"
+        href="mailto:2497436726@qq.com"
         class="btn-neon btn-neon--outline nav-cta"
       >
         {{ t('nav.hireMe') }}
