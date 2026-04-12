@@ -6,6 +6,11 @@
       <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
     </linearGradient>
 
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+
     <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
@@ -19,7 +24,7 @@
   <circle cx="100" cy="85" r="55" fill="url(#mainGrad)" opacity="0.15"/>
   <circle cx="100" cy="85" r="40" fill="url(#mainGrad)" opacity="0.2"/>
 
-  <!-- 字母 A 变形 -->
+  <!-- 字母 A 变形为公园/AI元素 -->
   <g filter="url(#softGlow)">
     <path d="M60 130 L80 50 L85 50 L100 130" fill="none" stroke="url(#mainGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M100 130 L115 50 L120 50 L140 130" fill="none" stroke="url(#mainGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,4 +46,7 @@
 
   <!-- 底部装饰 -->
   <path d="M45 145 Q100 135 155 145" fill="none" stroke="url(#mainGrad)" stroke-width="2" opacity="0.4"/>
+
+  <!-- 文字 -->
+  <text x="100" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="url(#textGrad)">AI PARK</text>
 </svg>

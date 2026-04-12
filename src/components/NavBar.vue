@@ -39,9 +39,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     <div class="nav-container">
       <!-- Logo -->
       <a class="nav-logo" href="#home" @click.prevent="scrollTo('#home')">
-        <span class="logo-bracket">[</span>
-        <span class="logo-text">DX</span>
-        <span class="logo-bracket">]</span>
+        <img src="/logo.svg" alt="Logo" class="logo-img" />
       </a>
 
       <!-- Desktop Links -->
@@ -124,25 +122,19 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: 0.05em;
   transition: var(--transition-smooth);
 }
 
 .nav-logo:hover {
-  text-shadow: 0 0 20px var(--glow-cyan);
+  filter: drop-shadow(0 0 15px var(--glow-cyan));
 }
 
-.logo-bracket {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 15px var(--glow-cyan);
-}
-
-.logo-text {
-  color: var(--text-primary);
+.logo-img {
+  height: 72px;
+  width: auto;
 }
 
 .nav-links {
